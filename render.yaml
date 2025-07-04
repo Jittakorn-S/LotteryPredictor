@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: lottery-predictor
+    runtime: dotnet
+    buildCommand: dotnet publish -c Release -o output
+    startCommand: dotnet output/LotteryPredictor.dll
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
